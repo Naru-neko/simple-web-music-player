@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>player</title>
+</head>
+<body>
+    <div class="upper">
+        <div class="upper-left">
+            <div class="smb-wrp">
+                <img src="images/smb.jpg" alt="" id="albumArt">
+            </div>
+            <div class="deck">
+                <button id="deck-button">
+                    <div id="deck-design1"></div>
+                    <div id="deck-design2"></div>
+                    <div id="deck-design3"></div>
+                    <p id="deck-text">InputMusic</p>
+                </button>
+                <input type="file" id="fileInput">
+            </div>
+        </div>
+        <div class="upper-right">
+            <div class="av-field"><div class="av-wrp"><canvas id="audioVisualizer"></canvas></div></div>
+            <div class="audio-title"><p id="audioTitle">No Music</p></div>
+        </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="lower">
+        <div class="controller">
+            <span onclick="document.getElementById('audioPlayer').play()"><img src="images/play-button.svg" alt=""></span>
+            <span onclick="document.getElementById('audioPlayer').pause()"><img src="images/pause.svg" alt=""></span>
+            <span onclick="document.getElementById('audioPlayer').volume+=0.01"><img src="images/plus.svg" alt=""></span>
+            <span onclick="document.getElementById('audioPlayer').volume-=0.01"><img src="images/remove.svg" alt=""></span>
+        </div>
+        <div class="info">
+            <div class="info-upper">
+                <div class="volume-display">
+                    <p id="volumeTitle">volume</p>
+                    <p id="volumeText">0%</p>
+                    <div id="volumeBarWrp"><div id="volumeBar"></div></div>
+                </div>
+                <div id="playStateWrp"><p id="playState">pausing</p></div>
+            </div>
+            <div class="info-lower">
+                <div id="infoLowerLeft"></div>
+                <p id="timeState">0:00</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" src="sample.mp3" loop autoplay></audio>
+
+    <script src="/js/jsmediatags.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/hidecursor.js"></script>
+
+</body>
+</html>

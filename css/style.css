@@ -1,0 +1,338 @@
+@font-face {
+    font-family: "dsdigi";
+    src: url("/font/DS-DIGI.TTF") format("truetype")
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(145, 145, 145);
+    color: aliceblue;
+}
+
+.hideCursor {
+    cursor: none;
+}
+
+.upper {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.upper-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.smb-wrp {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smb-wrp img {
+    width: auto;
+    height: 83%;
+    aspect-ratio: 1/1;
+}
+
+.deck {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deck-button {
+    padding: 0;
+    cursor: pointer;
+    width: 93%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(145, 145, 145);
+    border-radius: 0.2em;
+    box-shadow: #000000 0px 0px 14px;
+    position: relative;
+}
+
+#deck-button:hover > #deck-design2 {
+    background-color: #000000;
+}
+
+#deck-design1 {
+    width: 4%;
+    height: 20%;
+    border: #000000 solid 1px;
+    border-right: none;
+}
+
+#deck-design2 {
+    width: 70%;
+    height: 20%;
+    background-color: rgb(75, 75, 75);
+    border: #000000 solid 1px;
+    transition: 0.3s;
+}
+
+#deck-design3 {
+    width: 7%;
+    height: 20%;
+    border: #000000 solid 1px;
+    border-left: none;
+}
+
+#deck-text {
+    margin: 0;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-size: 0.9vw;
+    color: #474747;
+}
+
+#fileInput {
+    display: none;
+}
+
+.upper-right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+.av-field {
+    width: 100%;
+    height: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.av-wrp {
+    width: 70%;
+    height: 80%;
+    position: relative;
+}
+
+#audioVisualizer {
+    width: 97%;
+    height: 100%;
+}
+
+.av-wrp::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #61faff;
+    box-shadow: #61faff 0px 0px 10px;
+    bottom: 0;
+    left: 0;
+}
+
+.av-wrp::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #61faff;
+    box-shadow: #61faff 0px 0px 10px;
+    top: 0;
+    left: 0;
+}
+
+.audio-title {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#audioTitle {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 4vw;
+    color: #61faff;
+    text-shadow: #61faff 0px 0px 10px;
+}
+
+.separator {
+    width: 100%;
+    height: 10%;
+    position: relative;
+}
+
+.separator::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #61faff;
+    box-shadow: #61faff 0px 0px 10px;
+    top: 30%;
+}
+
+.separator::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #61faff;
+    box-shadow: #61faff 0px 0px 10px;
+    top: 50%;
+}
+
+.lower {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controller {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+}
+
+.controller span {
+    cursor: pointer;
+    width: 14vh;
+    height: 13vh;
+    font-size: 250%;
+    box-shadow:11px 11px 22px #00000093,
+             -11px -11px 22px #0000003a;
+    border-radius: 50%;
+    position: relative;
+}
+
+.controller span:hover {
+    box-shadow:inset 7px 7px 14px #00000093,
+             inset -7px -7px 14px #0000003a;
+}
+
+.controller span img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 33%;
+}
+
+.info {
+    width: 78%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 1rem 0 0 0;
+    overflow: hidden;
+    font-family: "dsdigi";
+}
+
+.info-upper {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-display {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#volumeTitle, #volumeText, #playState {
+    font-size: 2.5vw;
+    color: #61faff;
+    text-shadow: #61faff 0px 0px 10px;
+}
+
+#volumeTitle, #volumeText {
+    margin: 0;
+    margin-right: 0.5rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+#volumeBarWrp {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#volumeBar {
+    width: 0%;
+    height: 50%;
+    background-color: #61faff;
+    box-shadow: #61faff 0px 0px 5px;
+    border-radius: 0.1em;
+}
+
+#playStateWrp {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playState {
+    margin: 0;
+}
+
+.info-lower {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #000000;
+}
+
+#infoLowerLeft, #timeState {
+    width: 50%;
+    color: #61faff;
+    text-shadow: #61faff 0px 0px 10px;
+}
+
+#timeState {
+    margin: 0;
+    font-size: 13vw;
+    line-height: 1;
+    margin-left: 1%;
+}
